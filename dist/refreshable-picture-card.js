@@ -3,7 +3,7 @@ import {
   html,
   css,
 } from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module";
-import "./refreshable-picture-card-editor.js";
+import "./awtrix-live-card-editor.js";
 import { handleAction } from "./utils.js";
 
 class ResfeshablePictureCard extends LitElement {
@@ -21,12 +21,12 @@ class ResfeshablePictureCard extends LitElement {
   }
 
   static getConfigElement() {
-    return document.createElement("refreshable-picture-card-editor");
+    return document.createElement("awtrix-live-card-editor");
   }
 
   static getStubConfig() {
     return {
-      type: "custom:refreshable-picture-card",
+      type: "custom:awtrix-live-card",
       title: "Refreshable Picture",
       refresh_interval: 30,
       url: "",
@@ -104,6 +104,7 @@ class ResfeshablePictureCard extends LitElement {
       border-color: var(--ha-card-border-color, var(--divider-color, #e0e0e0));
       color: var(--primary-text-color);
       transition: all 0.3s ease-out 0s;
+      image-rendering: pixelated
       position: relative;
       border-radius: var(--ha-card-border-radius, 12px);
       width: 100%;
@@ -150,15 +151,15 @@ class ResfeshablePictureCard extends LitElement {
 }
 
 const cardDef = {
-  type: "refreshable-picture-card",
+  type: "awtrix-live-card",
   name: "Refreshable Picture Card",
   description:
     "A picture that can be loaded from url or entity attribute and refreshed every N seconds",
   preview: true,
-  documentationURL: "https://github.com/dimagoltsman/refreshable-picture-card",
+  documentationURL: "https://github.com/dimagoltsman/awtrix-live-card",
   configurable: true,
 };
 window.customCards = window.customCards || [];
 window.customCards.push(cardDef);
 
-customElements.define("refreshable-picture-card", ResfeshablePictureCard);
+customElements.define("awtrix-live-card", ResfeshablePictureCard);
