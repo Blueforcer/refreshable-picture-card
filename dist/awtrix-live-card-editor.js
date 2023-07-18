@@ -33,7 +33,7 @@ const SCHEMA = [
   { name: "noMargin", selector: { boolean: {} } },
 ];
 
-class ResfeshablePictureCardEditor extends LitElement {
+class AwtrixLiveCardEditor extends LitElement {
   static properties = {
     hass: {},
     _config: {},
@@ -68,7 +68,7 @@ class ResfeshablePictureCardEditor extends LitElement {
       case "noMargin":
         return "Remove margin";
       // return this.hass.localize(
-      //   `refreshable-picture-card.${name}`
+      //   `awtrix-live-card.${name}`
       // );
       case "refresh_interval":
         return this.hass.localize(
@@ -117,6 +117,6 @@ class ResfeshablePictureCardEditor extends LitElement {
 }
 
 customElements.define(
-  "refreshable-picture-card-editor",
-  ResfeshablePictureCardEditor
+  "awtrix-live-card-editor",
+  AwtrixLiveCardEditor
 );
